@@ -2,6 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@media (max-width: 785px) {
+    .navegation {
+        padding: 18px 20px;
+    }
+
+    .menu {
+        display: block;
+    }
+    .nav > .menu {
+        position: fixed;
+    }
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -14,6 +27,7 @@
 :root{
     --red: #d63a25;
     --dark: #1e1c2a;
+    --hvr-btn: #2F160F;
 }
 
 body{
@@ -28,6 +42,7 @@ body{
     box-shadow: 0 0.1rem 0.5rem #ccc; 
     width: 100%;
     background: white;
+    position: fixed;
     transition: all 0.5s;
 }
 
@@ -57,3 +72,76 @@ body{
 .navegation > ul > li > a:hover{
     color: var(--red);
 }
+
+.navegation > i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu > .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1), 
+.menu .bar:nth-child(3) {
+    background: var(--red);
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text {
+    max-width: 37rem;
+}
+
+.home-text > .text-h4 {
+    font-size: 1.5rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+}
+
+.home-text > .text-h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+
+.home-text > p {
+    margin-bottom: 4rem;
+}
+
+.home-botao {
+    padding: 15px 45px;
+    background: var(--red);
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.home-botao:hover {
+    background: var(--hvr-btn);
+}
+
+img { 
+    width: 100%;
+    border-radius: 500px;
+}
+
