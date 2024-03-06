@@ -18,10 +18,42 @@
 
 body{
     color: var(--dark);
-    background-color: white;
+    background: white;
 }
 .navegation{
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc; 
+    width: 100%;
+    background: white;
+    transition: all 0.5s;
+}
+
+.navegation > .logo {
+    color: var(--red);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.logo > span {
+    color: var(--dark);
+}
+
+.navegation > ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navegation > ul > li > a {
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navegation > ul > li > a:hover{
+    color: var(--red);
 }
